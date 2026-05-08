@@ -1,4 +1,4 @@
-package org.venkatesh.models;
+package org.venkatesh;
 
 public enum TransactionType {
     DEPOSIT,

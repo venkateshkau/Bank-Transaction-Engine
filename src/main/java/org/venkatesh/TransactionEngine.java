@@ -1,7 +1,5 @@
 package org.venkatesh;
 
-import org.venkatesh.models.Account;
-
 public class TransactionEngine {
 
     public void deposit(Account account, double amount) {
