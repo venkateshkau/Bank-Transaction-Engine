@@ -16,15 +16,17 @@ public class Account {
         return accountId;
     }
 
-    public void setAccountId(int accountId) {
-        this.accountId = accountId;
-    }
-
     public BigDecimal getBalance() {
         return balance;
     }
 
-    public void setBalance(BigDecimal balance) {
-        this.balance = balance;
+    public void deposit(BigDecimal balance) {
+        this.balance.add(balance);
+    }
+
+    public void withdraw(BigDecimal balance) {
+        if(this.balance.subtract(balance).compareTo(BigDecimal.ZERO) >= 0) {
+            this.balance = balance.subtract(balance);
+        }
     }
 }
