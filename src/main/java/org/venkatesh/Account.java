@@ -21,12 +21,12 @@ public class Account {
     }
 
     public void deposit(BigDecimal balance) {
-        this.balance.add(balance);
+        this.balance = this.balance.add(balance);
     }
 
     public void withdraw(BigDecimal balance) {
         if(this.balance.subtract(balance).compareTo(BigDecimal.ZERO) >= 0) {
-            this.balance = balance.subtract(balance);
+            this.balance = this.balance.subtract(balance);
         }
     }
 }
